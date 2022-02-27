@@ -14,7 +14,7 @@
  * 
  */
 
-function coinFlip() {
+export function coinFlip() {
   var value = Math.round(Math.random)
   let result = ""
   if (value < 1) {
@@ -44,7 +44,7 @@ function coinFlip() {
     ]
  */
 
-function coinFlips(flips) {
+export function coinFlips(flips) {
   var flipArray = new Array[flips]
   for (let i = 0; i < flips; i++) {
     flipArray[i] = coinFlip()
@@ -65,7 +65,7 @@ function coinFlips(flips) {
  * @returns {{ heads: number, tails: number }}
  */
 
-function countFlips(array) {
+export function countFlips(array) {
   let headsAmt = 0
   let tailsAmt = 0
   let result = {tails: tailsAmt, heads: headsAmt}
@@ -91,7 +91,7 @@ function countFlips(array) {
  * returns: { call: 'tails', flip: 'heads', result: 'lose' }
  */
 
-function flipACoin(call) {
+export function flipACoin(call) {
   let flipV = coinFlip()
   let resultV = ""
   let finalResult = {call: call, flip: flipV, result: resultV}
