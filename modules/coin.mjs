@@ -66,7 +66,18 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-
+  let headsAmt = 0
+  let tailsAmt = 0
+  let result = {tails: tailsAmt, heads: headsAmt}
+  for (let i = 0; i < length(array); i++) {
+    if (array[i] == "heads") {
+      headsAmt += 1
+    } else if (array[i] == "tails") {
+      tailsAmt += 1
+    }
+  }
+  console.log(array)
+  return result
 }
 
 /** Flip a coin!
@@ -81,7 +92,15 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-
+  let flipV = coinFlip()
+  let resultV = ""
+  let finalResult = {call: call, flip: flipV, result: resultV}
+  if (call == flipV) {
+    resultV = "win"
+  } else {
+    resultV = "lose"
+  }
+  return finalResult
 }
 
 
