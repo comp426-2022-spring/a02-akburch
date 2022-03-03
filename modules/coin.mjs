@@ -15,14 +15,7 @@
  */
 
 export function coinFlip() {
-  var value = Math.round(Math.random)
-  let result = ""
-  if (value < 1) {
-    result = "tails"
-  } else {
-    result = "heads"
-  }
-  return result
+  return Math.random() > 0.5 ? ("heads") : ("tails")
 }
 
 /** Multiple coin flips
@@ -45,11 +38,11 @@ export function coinFlip() {
  */
 
 export function coinFlips(flips) {
-  var flipArray = new Array[flips]
+  let flipArray = new Array(flips);
   for (let i = 0; i < flips; i++) {
-    flipArray[i] = coinFlip()
+    flipArray[i] = coinFlip();
   }
-  return flipArray
+  return flipArray;
 }
 
 /** Count multiple flips
@@ -66,18 +59,17 @@ export function coinFlips(flips) {
  */
 
 export function countFlips(array) {
-  let headsAmt = 0
-  let tailsAmt = 0
-  let result = {tails: tailsAmt, heads: headsAmt}
-  for (let i = 0; i < length(array); i++) {
+  var headsAmt = 0;
+  var tailsAmt = 0;
+  for (let i = 0; i < array.length; i++) {
     if (array[i] == "heads") {
-      headsAmt += 1
-    } else if (array[i] == "tails") {
-      tailsAmt += 1
+      headsAmt++;
+    } else {
+      tailsAmt++;
     }
   }
-  console.log(array)
-  return result
+  console.log(array);
+  return `{ tails: ${tailsAmt}, heads: ${headsAmt} }`
 }
 
 /** Flip a coin!
@@ -92,15 +84,14 @@ export function countFlips(array) {
  */
 
 export function flipACoin(call) {
-  let flipV = coinFlip()
-  let resultV = ""
-  let finalResult = {call: call, flip: flipV, result: resultV}
+  let flipV = coinFlip();
+  var resultV = "";
   if (call == flipV) {
-    resultV = "win"
+    resultV = "win";
   } else {
-    resultV = "lose"
+    resultV = "lose";
   }
-  return finalResult
+  return {call: call, flip: flipV, result: resultV};
 }
 
 
