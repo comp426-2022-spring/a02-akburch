@@ -1,4 +1,4 @@
-import {coinFlips, countFlips, flipACoin} from "./modules/coin.mjs";
+import {flipACoin} from "./modules/coin.mjs";
 import {createRequire} from "module";
 
 const require = createRequire(import.meta.url);
@@ -8,6 +8,6 @@ const call = args.call
 if (call == "heads" || call == "tails") {
     console.log(flipACoin(call));
 } else {
-    console.log("Error: incompatible input.");
+    console.log("Error: no input.");
     console.log("Usage: node guess-flip --call=[heads | tails]");
 }
