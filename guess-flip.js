@@ -8,5 +8,6 @@ const call = args.call
 if (call == "heads" || call == "tails") {
     console.log(flipACoin(call));
 } else {
-    throw console.error("choose heads or tails.");
+    console.log("Error: incompatible input.");
+    console.log("Usage: node guess-flip --call=[heads | tails]");
 }
